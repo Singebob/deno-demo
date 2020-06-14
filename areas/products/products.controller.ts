@@ -1,9 +1,11 @@
-import { Controller, Get } from 'https://deno.land/x/alosaur/mod.ts';
+import { Controller, Get, AutoInjectable } from 'https://deno.land/x/alosaur/mod.ts';
+import { ProductService } from './products.services.ts'
 
 @Controller('/products')
 export class ProductController {
+    constructor(private productService:ProductService) { }
     @Get('')
     getAll() {
-        return { id: 12, name: 'ouioui', price: 20.05 };
+        return this.productService.getAll();
     }
 }
