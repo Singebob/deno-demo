@@ -4,11 +4,11 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'https://denolib.com/deno
 export class Product {
 
     @PrimaryGeneratedColumn("uuid")
-    id: string;
+    id?: string;
 
     @Column("text")
-    name: string;
+    name!: string;
 
     @Column("text")
-    libelle: string;
+    libelle!: string;
 }

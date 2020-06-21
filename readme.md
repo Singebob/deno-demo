@@ -1,0 +1,1 @@
+deno run --unstable --allow-read --allow-net --config ./tsconfig.json server.ts      
